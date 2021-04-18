@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_18_053030) do
+ActiveRecord::Schema.define(version: 2021_04_18_205141) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -23,9 +23,11 @@ ActiveRecord::Schema.define(version: 2021_04_18_053030) do
     t.string "model"
     t.string "description"
     t.float "price"
-    t.integer "category_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "category_id"
+    t.index ["category_id"], name: "index_headphones_on_category_id"
   end
 
+  add_foreign_key "headphones", "categories"
 end

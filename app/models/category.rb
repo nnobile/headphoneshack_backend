@@ -1,3 +1,3 @@
 class Category < ApplicationRecord
-    has_many :headphones
+    has_many :headphones, dependent: :destroy
 end

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   namespace :api do 
     namespace :v1 do
-      resources :headphones, only [:index]
+      resources :headphones, only: [:index]
     end
   end
 

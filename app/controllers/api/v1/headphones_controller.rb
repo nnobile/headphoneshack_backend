@@ -2,7 +2,7 @@ class Api::V1::HeadphonesController < ApplicationController
 
     def index
         headphones = Headphone.all
-        render json: headphones
+        render json: HeadphoneSerializer.new(headphones)
     end
 
     def create

@@ -8,7 +8,7 @@ class Api::V1::HeadphonesController < ApplicationController
     def create
         headphone = Headphone.new(headphone_params)
         if headphone.save
-            render json: HeadphoneSerializer.new(headphones), status: :accepted
+            render json: HeadphoneSerializer.new(headphone), status: :accepted
         else
             render json: {errors: headphone.error.full_messages}, status: :unprocessible_entity
         end

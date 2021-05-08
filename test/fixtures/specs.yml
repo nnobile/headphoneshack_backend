@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  connection_type: MyString
+  features: MyString
+  wearing_style: MyString
+  warranty_details: MyString
+  headphone: one
+
+two:
+  connection_type: MyString
+  features: MyString
+  wearing_style: MyString
+  warranty_details: MyString
+  headphone: two
